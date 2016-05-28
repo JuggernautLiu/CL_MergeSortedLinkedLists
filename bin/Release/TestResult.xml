@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\Coding\MyCode\CL_MergeSortedLinkedLists\CL_MergeSortedLinkedLists\bin\Release\CL_MergeSortedLinkedLists.dll" total="8" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-05-26" time="22:33:18">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8689" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="D:\Coding\MyCode\CL_MergeSortedLinkedLists\packages\NUnit.Runners.2.6.4\tools" machine-name="TW-JUGGERNAUTL4" user="juggernaut_liu" user-domain="TREND" />
+  <culture-info current-culture="zh-TW" current-uiculture="zh-TW" />
+  <test-suite type="Assembly" name="D:\Coding\MyCode\CL_MergeSortedLinkedLists\CL_MergeSortedLinkedLists\bin\Release\CL_MergeSortedLinkedLists.dll" executed="True" result="Success" success="True" time="0.083" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="CL_MergeSortedLinkedLists" executed="True" result="Success" success="True" time="0.069" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="TestMergeSortedLinkedLists" executed="True" result="Success" success="True" time="0.068" asserts="0">
+            <results>
+              <test-case name="CL_MergeSortedLinkedLists.TestMergeSortedLinkedLists.Add_from1_add234return1234" executed="True" result="Success" success="True" time="0.025" asserts="1" />
+              <test-case name="CL_MergeSortedLinkedLists.TestMergeSortedLinkedLists.Add_from123_add4return1234" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="CL_MergeSortedLinkedLists.TestMergeSortedLinkedLists.Merge_2NullArray_RetNull" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+              <test-case name="CL_MergeSortedLinkedLists.TestMergeSortedLinkedLists.Merge_head1_134_head2_25_return_12345" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="CL_MergeSortedLinkedLists.TestMergeSortedLinkedLists.Merge_head1_134_head2_2567_return_1234567" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="CL_MergeSortedLinkedLists.TestMergeSortedLinkedLists.Merge_head1Null_Rethead2" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="CL_MergeSortedLinkedLists.TestMergeSortedLinkedLists.printData" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="CL_MergeSortedLinkedLists.TestMergeSortedLinkedLists.printData_nullresult_returnEmpty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
