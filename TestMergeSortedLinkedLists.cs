@@ -28,7 +28,7 @@ namespace CL_MergeSortedLinkedLists
             var expected = "1,2,3,4";
 
             var sortProcessor = new MergeSortedLinkedLists();
-            var actNode = sortProcessor.Add(nodes,newnode);
+            var actNode = sortProcessor.appendForTest(nodes,newnode);
             actual = sortProcessor.printData(actNode);
 
             Assert.AreEqual(expected, actual);
@@ -55,7 +55,7 @@ namespace CL_MergeSortedLinkedLists
             var expected = "1,2,3,4";
 
             var sortProcessor = new MergeSortedLinkedLists();
-            var actNode = sortProcessor.Add(node1, newnodes);
+            var actNode = sortProcessor.appendForTest(node1, newnodes);
             actual = sortProcessor.printData(actNode);
 
             Assert.AreEqual(expected, actual);

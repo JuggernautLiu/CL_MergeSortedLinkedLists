@@ -8,27 +8,33 @@ namespace CL_MergeSortedLinkedLists
 {
     public class MergeSortedLinkedLists
     {
-        public Node Add(Node head1, Node newnode)
+        private Node pollFirst(ref Node basenode)
         {
-            Node last = null;
-            
-            if (null == head1)
+            Node node = new Node();
+            node.data = basenode.data;
+            node.next = null;
+            basenode = basenode.next;
+            return node;
+        }
+
+        private void append(ref Node basenode, Node newnode)
+        {   
+            if (null == basenode)
             {
-                last = newnode;
+                basenode = newnode;
             }
             else
             {
-                Node tempA = head1;
-                while (null != tempA.next)
-                {                   
-                    tempA = tempA.next;
+                Node lastnode = basenode;
+                while (null != lastnode.next)
+                {
+                    lastnode = lastnode.next;
                 }
-                tempA.next = newnode;
-                last = head1;                
+                lastnode.next = newnode;               
             }            
-            return last;
-        }        
+        }
 
+        
         public Node Merge(Node head1, Node head2)
         {
             if (null == head1 && null == head2)
@@ -54,32 +60,26 @@ namespace CL_MergeSortedLinkedLists
             while (!bHead1Finish || !bHead2Finish)
             {
                 if (bHead1Finish)
-                {
-                    result = Add(result, temp2);
+                {   
+                    append(ref result, temp2);
                     break;
                 }
 
                 if (bHead2Finish)
-                {
-                    result = Add(result, temp1);
+                {   
+                    append(ref result, temp1);
                     break;
                 }
-
+                
                 if (temp1.data <= temp2.data)
-                {
-                    Node node = new Node();
-                    node.data = temp1.data;
-                    node.next = null;
-                    result = Add(result, node);
-                    temp1 = temp1.next;
+                {   
+                    Node node = pollFirst(ref temp1);
+                    append(ref result, node);
                 }
                 else
-                {
-                    Node node = new Node();
-                    node.data = temp2.data;
-                    node.next = null;
-                    result = Add(result, node);
-                    temp2 = temp2.next;
+                {  
+                    Node node = pollFirst(ref temp2);
+                    append(ref result, node);
                 }
 
                 if(null == temp1)
@@ -110,5 +110,27 @@ namespace CL_MergeSortedLinkedLists
             }
             return output;
         }
+
+        public Node appendForTest(Node basenode, Node newnode)
+        {
+            Node last = null;
+
+            if (null == basenode)
+            {
+                last = newnode;
+            }
+            else
+            {
+                Node tempA = basenode;
+                while (null != tempA.next)
+                {
+                    tempA = tempA.next;
+                }
+                tempA.next = newnode;
+                last = basenode;
+            }
+            return last;
+        }
+
     }
 }
