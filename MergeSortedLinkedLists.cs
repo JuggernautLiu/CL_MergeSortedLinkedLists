@@ -33,7 +33,6 @@ namespace CL_MergeSortedLinkedLists
                 lastnode.next = newnode;               
             }            
         }
-
         
         public Node Merge(Node head1, Node head2)
         {
